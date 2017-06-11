@@ -1,8 +1,8 @@
 
 public class PrimePrinter {
 	
-	public static void main(String[] args) {
-
+	protected static void print(int i) {
+		System.out.println(i);
 	}
 
 }
