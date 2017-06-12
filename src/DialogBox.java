@@ -9,7 +9,8 @@ public class DialogBox {
 	static int currentPrime;
 
 	public static void main(String[] args) {
-		JOptionPane.showInputDialog(null, "Please enter your starting value.", "PrimePrinter", JOptionPane.PLAIN_MESSAGE);
+		currentPrime = Integer.parseInt(JOptionPane.showInputDialog(null, "Please enter your starting value.",
+				"PrimePrinter", JOptionPane.PLAIN_MESSAGE));
 		jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		jf.setVisible(true);
 		jp.add(jl);
@@ -17,12 +18,12 @@ public class DialogBox {
 		jf.add(jp);
 		jf.pack();
 		jb.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				boolean foundPrime = false;
-				while(foundPrime == false) {
-					if(PrimeTester.isPrime(currentPrime)) {
+				while (foundPrime == false) {
+					if (PrimeTester.isPrime(currentPrime)) {
 						foundPrime = true;
 						PrimePrinter.print(currentPrime);
 					}
@@ -31,9 +32,4 @@ public class DialogBox {
 			}
 		});
 	}
-	
-	private void generatePrime() {
-		
-	}
-
 }
