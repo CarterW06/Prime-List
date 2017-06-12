@@ -8,7 +8,7 @@ public class DialogBox {
 	static JButton jb = new JButton("New Prime");
 	static int currentPrime;
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws NumberFormatException {
 		currentPrime = Integer.parseInt(JOptionPane.showInputDialog(null, "Please enter your starting value.",
 				"PrimePrinter", JOptionPane.PLAIN_MESSAGE));
 		jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
