@@ -6,11 +6,14 @@ public class DialogBox {
 	static JPanel jp = new JPanel();
 	static JLabel jl = new JLabel("Press the button at the right to print a prime.");
 	static JButton jb = new JButton("New Prime");
-	static int currentPrime;
+	protected static int currentPrime;
 
 	public static void main(String[] args) throws NumberFormatException {
 		currentPrime = Integer.parseInt(JOptionPane.showInputDialog(null, "Please enter your starting value.",
 				"PrimePrinter", JOptionPane.PLAIN_MESSAGE));
+		if(currentPrime <= 1) {
+			throw new NumberFormatException();
+		}
 		jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		jf.setVisible(true);
 		jp.add(jl);
