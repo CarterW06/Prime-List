@@ -1,13 +1,15 @@
 
 public class PrimeTester {
-
+	// Uses Wilson's theorem
 	protected static boolean isPrime(int i) {
-		for (int j = i - 1; j > 1; j--) {
-			if (i % j == 0) {
-				return false;
-			}
+		int product = 1;
+		for (int j = 1; j < i; j++) {
+			product *= j;
 		}
-		return true;
+		if ((product + 1) % i == 0) {
+			return true;
+		}
+		return false;
 	}
 
 }
