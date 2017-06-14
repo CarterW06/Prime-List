@@ -21,11 +21,12 @@ public class DialogBox {
 		jf.add(jp);
 		jf.pack();
 		jb.addActionListener(new ActionListener() {
-
+			@SuppressWarnings("unused")
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				boolean foundPrime = false;
 				while (foundPrime == false) {
+					int localCurrentPrime = currentPrime;
 					if (PrimeTester.isPrime(currentPrime)) {
 						foundPrime = true;
 						PrimePrinter.print(currentPrime);

@@ -1,7 +1,5 @@
-@SuppressWarnings("unused")
-public class PrimeTester {
 
-	private int currentPrimeCopy = DialogBox.currentPrime;
+public class PrimeTester {
 
 	protected static boolean isPrime(int i) {
 		for (int j = i - 1; j > 1; j--) {
